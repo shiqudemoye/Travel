@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="recommend-title">热销推荐</div>
-    <ul v-for="item of recommendList" :key="item.id">
+    <ul v-for="item of list" :key="item.id">
       <li class="item border-bottom">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-        title: '北京欢乐谷',
-        desc: '北京欢乐谷北京欢乐谷北京欢乐谷北京欢乐谷北京欢乐谷北京欢乐谷'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-        title: '北京野生动物园',
-        desc: '北京野生动物园北京野生动物园北京野生动物园北京野生动物园'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-        title: '故宫',
-        desc: '故宫故宫故宫故宫故宫故宫'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/2f/e615bc3c8e0cf46d9fb92c58ac305f45.water.jpg_200x200_e4e69a48.jpg',
-        title: '世界公园',
-        desc: '世界公园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
